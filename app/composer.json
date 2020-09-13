@@ -1,0 +1,19 @@
+{
+    "name": "matheus-gomes/app",
+    "authors": [
+        {
+            "name": "Matheus Placido Ferreira Gomes",
+            "email": "matheusejesuss2@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/routing": "^5.1",
+        "symfony/http-foundation": "^5.1",
+        "symfony/http-kernel": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Learning\\": "src"
+        }
+    }
+}

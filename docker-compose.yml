@@ -1,0 +1,41 @@
+version: '2'
+
+# Named volumes
+volumes:
+  # MySQL Data
+  mysql-data:
+    driver: local
+
+services:
+  # MySQL (5.7)
+  db:
+    image: mysql:5.7
+    container_name: db
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=210900
+      - MYSQL_DATABASE=teste
+      - MYSQL_USER=teste
+      - MYSQL_PASSWORD=teste
+
+  web:
+    image: nginx:latest
+    container_name: server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/app
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    links:
+      - php
+
+  php:
+    container_name: app
+    build: .
+    volumes:
+      - ./app:/app
+    links:
+      - db
