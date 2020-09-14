@@ -5,13 +5,13 @@ namespace Learning\Utils;
 class RouteUtils
 {
     public static function getRouteParams($attributes) {
-        $modifiedAtributes = $attributes;
+        $modifiedAttributes = $attributes;
         unset(
-            $modifiedAtributes['_route'],
-            $modifiedAtributes['controller'],
-            $modifiedAtributes['method']
+            $modifiedAttributes['_route'],
+            $modifiedAttributes['controller'],
+            $modifiedAttributes['method']
         );
 
-        return $modifiedAtributes;
+        return $modifiedAttributes;
     }
 }
