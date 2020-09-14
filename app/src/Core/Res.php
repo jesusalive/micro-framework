@@ -14,7 +14,10 @@ class Res
 
     public static function error($message, $status = Response::HTTP_BAD_REQUEST)
     {
-        return new JsonResponse(["error" => $message], $status);
+        return new JsonResponse([
+            "errors" => ["error" => ["message" => $message]]],
+            $status
+        );
     }
 
     public static function send($content, $status = Response::HTTP_OK)
