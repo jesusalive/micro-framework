@@ -2,9 +2,10 @@
 
 namespace Learning\Controllers;
 
+use Learning\Core\Controller;
 use Learning\Core\Res;
 
-class UsersController
+class UsersController extends Controller
 {
     public function getAll()
     {
@@ -23,7 +24,7 @@ class UsersController
     public function update($id) {
         return Res::json([
             'id' => $id,
-            'name' => 'Fernandinho Beira Mar'
+            'name' => 'Matheus Gomes'
         ]);
     }
 }

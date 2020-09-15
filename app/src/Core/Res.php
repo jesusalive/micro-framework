@@ -9,15 +9,21 @@ class Res
 {
     public static function json($content = [], $status = Response::HTTP_OK)
     {
-        return new JsonResponse(["data" => $content], $status);
+        $response = new JsonResponse(["data" => $content], $status);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 
     public static function error($message, $status = Response::HTTP_BAD_REQUEST)
     {
-        return new JsonResponse([
-            "errors" => ["error" => ["message" => $message]]],
+        $response = new JsonResponse(
+            ["errors" => ["error" => ["message" => $message]]],
             $status
         );
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 
     public static function send($content, $status = Response::HTTP_OK)
