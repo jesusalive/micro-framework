@@ -21,6 +21,13 @@ class UsersController extends Controller
         ]);
     }
 
+    public function create() {
+        return Res::json([
+            'id' => 3,
+            'name' => 'Matheus Gomes'
+        ]);
+    }
+
     public function update($id) {
         return Res::json([
             'id' => $id,

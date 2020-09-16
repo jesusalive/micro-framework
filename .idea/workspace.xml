@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Res.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Res.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routes.php" afterDir="false" />
     </list>
@@ -98,7 +96,8 @@
       <workItem from="1600115279402" duration="3783000" />
       <workItem from="1600120901413" duration="155000" />
       <workItem from="1600202872546" duration="38000" />
-      <workItem from="1600202962436" duration="4646000" />
+      <workItem from="1600202962436" duration="5607000" />
+      <workItem from="1600214762446" duration="1523000" />
     </task>
     <servers />
   </component>

@@ -10,9 +10,10 @@ $app->get('/', function() {
     return Res::send('Hello World');
 });
 
-$app->get('/params/{name}', function($name) {
-    return Res::send('Hello World ' . $name);
+$app->get('/params/{id}/{name}', function($params, $body, $request) {
+    return Res::send('Hello World ' . $params['name']);
 });
 
 $app->get('/users', UsersController::class, 'getAll');
+$app->post('/users', UsersController::class, 'create');
 $app->put('/users/{id}', UsersController::class, 'update');

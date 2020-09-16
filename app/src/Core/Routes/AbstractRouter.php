@@ -17,7 +17,6 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 abstract class AbstractRouter implements HttpKernelInterface
 {
     protected $routes;
-    protected $request;
 
     public function __construct()
     {
@@ -34,14 +33,15 @@ abstract class AbstractRouter implements HttpKernelInterface
         try {
             $attributes = $matcher->match($request->getPathInfo());
             $routeParams = RouteUtils::getRouteParams($attributes);
-            $this->request = $request;
 
             if (!$attributes['method']) {
                 $handler = $attributes['controller'];
-                return call_user_func_array($handler, $routeParams);
+                $requestBody = json_decode($request->getContent());
+
+                return call_user_func_array($handler, [$routeParams, $requestBody, $request]);
             }
 
-            $controller = new $attributes['controller']($this->request);
+            $controller = new $attributes['controller']($request);
             $response = call_user_func_array([$controller, $attributes['method']], $routeParams);
         } catch (ResourceNotFoundException $e) {
             $response = Res::error('Not found!', Response::HTTP_NOT_FOUND);
@@ -66,17 +66,5 @@ abstract class AbstractRouter implements HttpKernelInterface
                 [$httpVerb]
             )
         );
-    }
-
-    public function getRequest()
-    {
-        return $this->request;
-    }
-
-    public function getRequestBody()
-    {
-        return $this->request->getMethod() == 'GET'
-            ? json_decode('{}')
-            : json_decode($this->request->getContent());
     }
 }
