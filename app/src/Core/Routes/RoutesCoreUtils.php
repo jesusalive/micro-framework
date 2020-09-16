@@ -1,8 +1,8 @@
 <?php
 
-namespace Learning\Utils;
+namespace Learning\Core\Routes;
 
-class RouteUtils
+class RoutesCoreUtils
 {
     public static function getRouteParams($attributes)
     {

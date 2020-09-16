@@ -3,7 +3,6 @@
 namespace Learning\Core\Routes;
 
 use Learning\Core\Res;
-use Learning\Utils\RouteUtils;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
@@ -32,7 +31,7 @@ abstract class AbstractRouter implements HttpKernelInterface
 
         try {
             $attributes = $matcher->match($request->getPathInfo());
-            $routeParams = RouteUtils::getRouteParams($attributes);
+            $routeParams = RoutesCoreUtils::getRouteParams($attributes);
 
             if (!$attributes['method']) {
                 $handler = $attributes['controller'];

@@ -2,14 +2,12 @@
 
 namespace Learning\Core\Routes;
 
-use Learning\Utils\RouteUtils;
-
 class Router extends AbstractRouter
 {
     public function get($name, $path, $controller, $method = null)
     {
         return $this->map(
-            RouteUtils::handleRouteName($name, $path, 'GET'),
+            RoutesCoreUtils::handleRouteName($name, $path, 'GET'),
             $path,
             $controller,
             $method,
@@ -20,7 +18,7 @@ class Router extends AbstractRouter
     public function post($name, $path, $controller, $method = null)
     {
         return $this->map(
-            RouteUtils::handleRouteName($name, $path, 'POST'),
+            RoutesCoreUtils::handleRouteName($name, $path, 'POST'),
             $path,
             $controller,
             $method,
@@ -31,7 +29,7 @@ class Router extends AbstractRouter
     public function put($name, $path, $controller, $method = null)
     {
         return $this->map(
-            RouteUtils::handleRouteName($name, $path, 'PUT'),
+            RoutesCoreUtils::handleRouteName($name, $path, 'PUT'),
             $path,
             $controller,
             $method,
@@ -42,7 +40,7 @@ class Router extends AbstractRouter
     public function delete($name, $path, $controller, $method = null)
     {
         return $this->map(
-            RouteUtils::handleRouteName($name, $path, 'DELETE'),
+            RoutesCoreUtils::handleRouteName($name, $path, 'DELETE'),
             $path,
             $controller,
             $method,
