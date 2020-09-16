@@ -4,7 +4,8 @@ namespace Learning\Utils;
 
 class RouteUtils
 {
-    public static function getRouteParams($attributes) {
+    public static function getRouteParams($attributes)
+    {
         $modifiedAttributes = $attributes;
         unset(
             $modifiedAttributes['_route'],
@@ -13,5 +14,14 @@ class RouteUtils
         );
 
         return $modifiedAttributes;
+    }
+
+    public static function handleRouteName($name, $path, $httpVerb)
+    {
+        if (!is_null($name) && is_string($name) && $name != '') {
+            return $name;
+        }
+
+        return $httpVerb . '_' . $path;
     }
 }

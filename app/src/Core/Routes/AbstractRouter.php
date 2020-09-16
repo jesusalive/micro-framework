@@ -52,10 +52,10 @@ abstract class AbstractRouter implements HttpKernelInterface
         return $response;
     }
 
-    public function map($path, $controller, $controllerMethod, $httpVerb)
+    public function map($name, $path, $controller, $controllerMethod, $httpVerb)
     {
         $this->routes->add(
-            $path,
+            $name,
             new Route(
                 $path,
                 ['controller' => $controller, 'method' => $controllerMethod],
