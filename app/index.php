@@ -8,8 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/bootstrap/bootstrap.php';
 
 $router = require_once __DIR__ . '/src/routes.php';
-
-$request = Request::createFromGlobals();
 $kernel = new Kernel($router->getRoutesCollection());
 
+$request = Request::createFromGlobals();
 $kernel->handle($request)->send();
