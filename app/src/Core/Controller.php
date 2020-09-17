@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Learning\Core;
 
@@ -6,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 abstract class Controller
 {
-    protected $request;
+    protected Request $request;
     protected $requestBody;
 
     function __construct(Request $request)

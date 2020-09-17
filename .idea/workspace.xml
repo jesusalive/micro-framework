@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/Core/Routes/IRes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Core/Res.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Res.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/RoutesCoreUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/RoutesCoreUtils.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/Core" />
       <recent name="$PROJECT_DIR$/app/src/Core/Routes" />
       <recent name="$PROJECT_DIR$/app/src/Core/Router" />
     </key>
@@ -101,7 +105,7 @@
       <workItem from="1600202962436" duration="5607000" />
       <workItem from="1600214762446" duration="3227000" />
       <workItem from="1600218023021" duration="74000" />
-      <workItem from="1600298486918" duration="1332000" />
+      <workItem from="1600298486918" duration="3872000" />
     </task>
     <servers />
   </component>

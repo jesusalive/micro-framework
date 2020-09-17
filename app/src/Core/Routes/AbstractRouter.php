@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Learning\Core\Routes;
 
@@ -15,14 +16,14 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 abstract class AbstractRouter implements HttpKernelInterface
 {
-    protected $routes;
+    protected RouteCollection $routes;
 
     public function __construct()
     {
         $this->routes = new RouteCollection();
     }
 
-    public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true)
+    public function handle(Request $request, int $type = self::MASTER_REQUEST, bool $catch = true)
     {
         $context = new RequestContext();
         $context->fromRequest($request);
@@ -51,8 +52,13 @@ abstract class AbstractRouter implements HttpKernelInterface
         return $response;
     }
 
-    public function map($name, $path, $controller, $controllerMethod, $httpVerb)
-    {
+    public function map(
+        string $name,
+        string $path,
+        $controller,
+        string $httpVerb,
+        string $controllerMethod = null
+    ): void {
         $this->routes->add(
             $name,
             new Route(

@@ -1,10 +1,11 @@
 <?php
+declare(strict_types = 1);
 
 namespace Learning\Core\Routes;
 
 class RoutesCoreUtils
 {
-    public static function getRouteParams($attributes)
+    public static function getRouteParams(array $attributes): array
     {
         $modifiedAttributes = $attributes;
         unset(
@@ -16,7 +17,7 @@ class RoutesCoreUtils
         return $modifiedAttributes;
     }
 
-    public static function handleRouteName($name, $path, $httpVerb)
+    public static function handleRouteName(string $name, string $path, string $httpVerb): string
     {
         if (!is_null($name) && is_string($name) && $name != '') {
             return $name;

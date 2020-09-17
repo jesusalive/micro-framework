@@ -1,50 +1,51 @@
 <?php
+declare(strict_types = 1);
 
 namespace Learning\Core\Routes;
 
 class Router extends AbstractRouter implements IRouter
 {
-    public function get($name, $path, $controller, $method = null)
+    public function get(string $name, string $path, $controller, string $method = null): void
     {
-        return $this->map(
+        $this->map(
             RoutesCoreUtils::handleRouteName($name, $path, 'GET'),
             $path,
             $controller,
-            $method,
-            'GET'
+            'GET',
+            $method
         );
     }
 
-    public function post($name, $path, $controller, $method = null)
+    public function post(string $name, string $path, $controller, string $method = null): void
     {
-        return $this->map(
+        $this->map(
             RoutesCoreUtils::handleRouteName($name, $path, 'POST'),
             $path,
             $controller,
-            $method,
-            'POST'
+            'POST',
+            $method
         );
     }
 
-    public function put($name, $path, $controller, $method = null)
+    public function put(string $name, string $path, $controller, string $method = null): void
     {
-        return $this->map(
+        $this->map(
             RoutesCoreUtils::handleRouteName($name, $path, 'PUT'),
             $path,
             $controller,
-            $method,
-            'PUT'
+            'PUT',
+            $method
         );
     }
 
-    public function delete($name, $path, $controller, $method = null)
+    public function delete(string $name, string $path, $controller, string $method = null): void
     {
-        return $this->map(
+        $this->map(
             RoutesCoreUtils::handleRouteName($name, $path, 'DELETE'),
             $path,
             $controller,
-            $method,
-            'DELETE'
+            'DELETE',
+            $method
         );
     }
 }
