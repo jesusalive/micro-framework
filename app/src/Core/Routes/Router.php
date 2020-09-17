@@ -2,7 +2,7 @@
 
 namespace Learning\Core\Routes;
 
-class Router extends AbstractRouter
+class Router extends AbstractRouter implements IRouter
 {
     public function get($name, $path, $controller, $method = null)
     {
