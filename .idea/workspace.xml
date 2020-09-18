@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/micro-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Core/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Res.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Res.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" afterDir="false" />
@@ -59,6 +62,28 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/app/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/app/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/app/vendor/phpoption/phpoption" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hTPrlJWLO2D54Lua5p9N2NdcWt" />
@@ -83,6 +108,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/bootstrap" />
       <recent name="$PROJECT_DIR$/app/src/Core" />
       <recent name="$PROJECT_DIR$/app/src/Core/Routes" />
       <recent name="$PROJECT_DIR$/app/src/Core/Router" />
@@ -105,7 +131,8 @@
       <workItem from="1600202962436" duration="5607000" />
       <workItem from="1600214762446" duration="3227000" />
       <workItem from="1600218023021" duration="74000" />
-      <workItem from="1600298486918" duration="3872000" />
+      <workItem from="1600298486918" duration="7918000" />
+      <workItem from="1600471431827" duration="939000" />
     </task>
     <servers />
   </component>
@@ -133,6 +160,10 @@
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
     <state x="406" y="1107" width="950" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600217824718" />
+    <state x="416" y="155" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600306684702">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="155" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1600306684702" />
     <state x="419" y="1319" width="518" height="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600203195189">
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
@@ -141,22 +172,26 @@
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
     <state x="416" y="1392" width="523" height="167" key="ComposerInitDialogKey/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600117324456" />
-    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog" timestamp="1600301236978">
+    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl" timestamp="1600305900391">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1600305900391" />
+    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog" timestamp="1600306644659">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="349" y="1197" width="713" height="557" key="NewPhpClassDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600203201925" />
-    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1600301236978" />
-    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog" timestamp="1600040877751">
+    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1600306644659" />
+    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog" timestamp="1600306040220">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1600040877751" />
+    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1600306040220" />
     <state x="172" y="32" key="SettingsEditor" timestamp="1600032385987">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1600032385987" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600032918786">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600471684475">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600032918786" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600471684475" />
   </component>
 </project>

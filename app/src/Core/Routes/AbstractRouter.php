@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace Learning\Core\Routes;
 
@@ -23,7 +24,7 @@ abstract class AbstractRouter
         $this->routes = new RouteCollection();
     }
 
-    public function map(
+    protected function map(
         string $name,
         string $path,
         $controller,

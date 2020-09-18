@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace Learning\Core;
 
@@ -10,10 +11,9 @@ abstract class Controller
     protected Request $request;
     protected $requestBody;
 
-    function __construct(Request $request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
         $this->requestBody = json_decode($request->getContent());
     }
-
 }

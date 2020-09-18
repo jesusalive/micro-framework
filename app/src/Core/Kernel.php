@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Learning\Core;
@@ -17,7 +18,7 @@ class Kernel implements HttpKernelInterface
 {
     protected RouteCollection $routes;
 
-    function __construct(RouteCollection $routeCollection)
+    public function __construct(RouteCollection $routeCollection)
     {
         $this->routes = $routeCollection;
     }
