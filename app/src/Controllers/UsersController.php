@@ -4,6 +4,7 @@ namespace Learning\Controllers;
 
 use Learning\Core\Controller;
 use Learning\Core\Res;
+use Learning\Entities\User;
 
 class UsersController extends Controller
 {
