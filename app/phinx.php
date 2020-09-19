@@ -1,9 +1,6 @@
 <?php
 
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+require_once __DIR__ . '/bootstrap/bootstrap.php';
 
 $dbConfig = [
     'adapter' => $_ENV['DB_DRIVER'],
