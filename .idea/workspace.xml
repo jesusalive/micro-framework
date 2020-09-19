@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/micro-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Res.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Res.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/AbstractRouter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/IRouter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Core/Routes/RoutesCoreUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Core/Routes/RoutesCoreUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bootstrap/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bootstrap/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +79,14 @@
       <path value="$PROJECT_DIR$/app/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/app/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/app/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/utility" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/database" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/core" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/datasource" />
+      <path value="$PROJECT_DIR$/app/vendor/robmorgan/phinx" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hTPrlJWLO2D54Lua5p9N2NdcWt" />
@@ -132,7 +135,7 @@
       <workItem from="1600214762446" duration="3227000" />
       <workItem from="1600218023021" duration="74000" />
       <workItem from="1600298486918" duration="7918000" />
-      <workItem from="1600471431827" duration="939000" />
+      <workItem from="1600471431827" duration="3043000" />
     </task>
     <servers />
   </component>
