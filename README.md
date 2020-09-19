@@ -9,7 +9,7 @@ After clone this project, enter on app folder and run:
 ```
 composer install
 ```
-Then set your .env file with your config
+Then set your .env file with your config \n
 Come back to main folder and run:
 ```
 docker-compose up -d
