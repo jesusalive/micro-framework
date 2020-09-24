@@ -36,9 +36,36 @@ class UsersController extends Controller
 
     public function update($id)
     {
-        return Res::json([
-            'id' => $id,
-            'name' => 'Matheus Gomes'
-        ]);
+        $user = $this->userRepository->findOneBy(['id' => $id]);
+
+        if (!$user) {
+            return Res::error('User not found');
+        }
+
+        if ($this->requestBody->name) {
+            $user->setName($this->requestBody->name);
+        }
+
+        if ($this->requestBody->email) {
+            $user->setName($this->requestBody->name);
+        }
+
+        $this->entityManager->flush();
+
+        return Res::json($user);
+    }
+
+    public function delete($id)
+    {
+        $user = $this->userRepository->findOneBy(['id' => $id]);
+
+        if (!$user) {
+            return Res::error('User not found');
+        }
+
+        $this->entityManager->remove($user);
+        $this->entityManager->flush();
+
+        return Res::send('');
     }
 }
