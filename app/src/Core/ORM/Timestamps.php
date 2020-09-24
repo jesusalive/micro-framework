@@ -9,12 +9,12 @@ trait Timestamps
     /**
      * @Column(type="datetime", name="created_at")
      */
-    private \DateTime $createdAt;
+    protected \DateTime $createdAt;
 
     /**
      * @Column(type="datetime", name="updated_at")
      */
-    private \DateTime $updatedAt;
+    protected \DateTime $updatedAt;
 
     /**
      * @PrePersist()

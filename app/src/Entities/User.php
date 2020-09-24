@@ -9,7 +9,7 @@ use Learning\Core\ORM\Timestamps;
  * @Table(name="users")
  * @HasLifecycleCallbacks()
  */
-class User
+class User implements \JsonSerializable
 {
     use Timestamps;
 
@@ -18,17 +18,64 @@ class User
      * @Column(type="integer")
      * @GeneratedValue(strategy="AUTO")
      */
-    private int $id;
+    protected int $id;
 
     /**
      * @Column(type="string")
      */
-    private string $name;
+    protected string $name;
 
     /**
      * @Column(type="string", unique=true)
      */
-    private string $email;
+    protected string $email;
+
+    /**
+     * User constructor.
+     * @param string $name
+     * @param string $email
+     */
+    public function __construct(string $name, string $email)
+    {
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     * @return User
+     */
+    public function setCreatedAt(\DateTime $createdAt): User
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt(): \DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     * @return User
+     */
+    public function setUpdatedAt(\DateTime $updatedAt): User
+    {
+        $this->updatedAt = $updatedAt;
+        return $this;
+    }
 
     /**
      * @return int
@@ -38,6 +85,15 @@ class User
         return $this->id;
     }
 
+    /**
+     * @param int $id
+     * @return User
+     */
+    public function setId(int $id): User
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * @return string
@@ -73,5 +129,16 @@ class User
     {
         $this->email = $email;
         return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            "id" => $this->getId(),
+            "name" => $this->getName(),
+            "email" => $this->getEmail(),
+            "createdAt" => $this->getCreatedAt(),
+            "updatedAt" => $this->getUpdatedAt()
+        ];
     }
 }

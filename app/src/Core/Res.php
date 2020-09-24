@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class Res
 {
-    public static function json(array $content = [], int $status = Response::HTTP_OK): JsonResponse
+    public static function json($content = [], int $status = Response::HTTP_OK): JsonResponse
     {
         $response = new JsonResponse(["data" => $content], $status);
         $response->headers->set('Content-Type', 'application/json');

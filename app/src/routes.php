@@ -14,6 +14,10 @@ $router->get('params_test', '/params/{id}/{name}', function ($params, $body, $re
     return Res::send('Hello World ' . $params['name']);
 });
 
+$router->get('info', '/info', function ($params, $body, $request) {
+    return phpinfo();
+});
+
 $router->get('get_users', '/users', UsersController::class, 'getAll');
 $router->post('store_users', '/users', UsersController::class, 'create');
 $router->put('update_users', '/users/{id}', UsersController::class, 'update');
