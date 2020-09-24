@@ -23,10 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/micro-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bootstrap/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bootstrap/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,14 +78,13 @@
       <path value="$PROJECT_DIR$/app/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/app/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/app/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/app/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/app/vendor/cakephp/utility" />
-      <path value="$PROJECT_DIR$/app/vendor/cakephp/database" />
-      <path value="$PROJECT_DIR$/app/vendor/cakephp/core" />
-      <path value="$PROJECT_DIR$/app/vendor/cakephp/datasource" />
-      <path value="$PROJECT_DIR$/app/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/app/vendor/webimpress/safe-writer" />
+      <path value="$PROJECT_DIR$/app/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/stopwatch" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hTPrlJWLO2D54Lua5p9N2NdcWt" />
@@ -97,7 +95,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Localization.php" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,14 +104,19 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/bootstrap" />
+      <recent name="$PROJECT_DIR$/app/src/Core/ORM" />
       <recent name="$PROJECT_DIR$/app/src/Core" />
+      <recent name="$PROJECT_DIR$/app/bootstrap" />
       <recent name="$PROJECT_DIR$/app/src/Core/Routes" />
       <recent name="$PROJECT_DIR$/app/src/Core/Router" />
     </key>
@@ -136,6 +140,13 @@
       <workItem from="1600218023021" duration="74000" />
       <workItem from="1600298486918" duration="7918000" />
       <workItem from="1600471431827" duration="3043000" />
+      <workItem from="1600515252652" duration="14773000" />
+      <workItem from="1600531264607" duration="540000" />
+      <workItem from="1600604894429" duration="8463000" />
+      <workItem from="1600636334926" duration="1070000" />
+      <workItem from="1600821336402" duration="350000" />
+      <workItem from="1600882178732" duration="5613000" />
+      <workItem from="1600903428013" duration="3250000" />
     </task>
     <servers />
   </component>
@@ -155,14 +166,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="457" y="27" width="441" height="741" key="#com.intellij.ide.util.MemberChooser" timestamp="1600904595124">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="457" y="1163" key="#com.intellij.ide.util.MemberChooser/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600613087656" />
+    <state x="457" y="27" width="441" height="741" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1600904595124" />
+    <state x="642" y="419" width="374" height="558" key="#com.intellij.ide.util.MemberChooser/1920.312.1366.768/0.339.1920.741@0.339.1920.741" timestamp="1600885364227" />
     <state x="366" y="1214" width="624" height="522" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600202888401">
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
     <state x="366" y="1214" width="624" height="522" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600202888401" />
-    <state x="406" y="1107" width="950" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600217824718">
+    <state x="406" y="1107" width="942" height="737" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600607104409">
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
-    <state x="406" y="1107" width="950" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600217824718" />
+    <state x="406" y="1107" width="950" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600607104409" />
+    <state x="406" y="27" width="942" height="737" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1600520321809" />
     <state x="416" y="155" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600306684702">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -175,26 +193,32 @@
       <screen x="0" y="1080" width="1366" height="768" />
     </state>
     <state x="416" y="1392" width="523" height="167" key="ComposerInitDialogKey/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600117324456" />
-    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl" timestamp="1600305900391">
+    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl" timestamp="1600904964123">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1600305900391" />
-    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog" timestamp="1600306644659">
+    <state x="466" y="155" width="424" height="480" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1600904964123" />
+    <state x="349" y="140" width="721" height="557" key="NewPhpClassDialog" timestamp="1600904738865">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="349" y="1197" width="713" height="557" key="NewPhpClassDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600203201925" />
-    <state x="349" y="140" width="713" height="557" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1600306644659" />
-    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog" timestamp="1600306040220">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="349" y="1197" width="713" height="557" key="NewPhpClassDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600606361671" />
+    <state x="349" y="140" width="721" height="557" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1600904738865" />
+    <state x="491" y="452" width="721" height="557" key="NewPhpClassDialog/1920.312.1366.768/0.339.1920.741@0.339.1920.741" timestamp="1600887670524" />
+    <state x="478" y="1387" width="399" height="145" key="NewPhpFileDialog" timestamp="1600604942203">
+      <screen x="0" y="1080" width="1366" height="768" />
     </state>
-    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1600306040220" />
+    <state x="478" y="1387" key="NewPhpFileDialog/0.1080.1366.768/0.0.1920.1080@0.1080.1366.768" timestamp="1600604942203" />
+    <state x="478" y="323" width="399" height="145" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1600520377351" />
     <state x="172" y="32" key="SettingsEditor" timestamp="1600032385987">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1600032385987" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600471684475">
+    <state x="347" y="177" key="run.anything.popup" timestamp="1600904815206">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600471684475" />
+    <state x="347" y="177" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1600904815206" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600907756670">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600907756670" />
   </component>
 </project>
