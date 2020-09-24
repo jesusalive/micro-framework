@@ -18,7 +18,8 @@
     "autoload": {
         "psr-4": {
             "Learning\\": "src",
-            "LearningDB\\": "db"
+            "LearningDB\\": "db",
+            "LearningCore\\": "core"
         }
     }
 }

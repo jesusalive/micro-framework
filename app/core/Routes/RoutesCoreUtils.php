@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Learning\Core\Routes;
+namespace LearningCore\Routes;
 
 class RoutesCoreUtils
 {

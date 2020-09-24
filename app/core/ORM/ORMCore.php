@@ -1,6 +1,6 @@
 <?php
 
-namespace Learning\Core\ORM;
+namespace LearningCore\ORM;
 
 class ORMCore
 {

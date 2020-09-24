@@ -1,6 +1,6 @@
 <?php
 
-namespace Learning\Core\ORM;
+namespace LearningCore\ORM;
 
 use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityManager;

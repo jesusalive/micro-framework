@@ -4,8 +4,8 @@ namespace Learning\Controllers;
 
 use Doctrine\ORM\EntityRepository;
 use Learning\Core\Controller;
-use Learning\Core\Res;
-use Learning\Core\Utils;
+use LearningCore\Res;
+use LearningCore\Utils;
 use Learning\Entities\User;
 use Symfony\Component\HttpFoundation\Request;
 

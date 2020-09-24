@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Learning\Core\Routes;
+namespace LearningCore\Routes;
 
 use Learning\Core\Res;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;

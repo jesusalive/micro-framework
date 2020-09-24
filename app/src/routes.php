@@ -1,9 +1,9 @@
 <?php
 
 use Learning\Controllers\UsersController;
-use Learning\Core\ORM\ORMCore;
-use Learning\Core\Res;
-use Learning\Core\Routes\Router;
+use LearningCore\ORM\ORMCore;
+use LearningCore\Res;
+use LearningCore\Routes\Router;
 
 $router = new Router();
 $entityManager = ORMCore::getEntityManager();

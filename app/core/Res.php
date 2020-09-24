@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Learning\Core;
+namespace LearningCore;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;

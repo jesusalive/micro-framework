@@ -2,7 +2,7 @@
 
 namespace Learning\Entities;
 
-use Learning\Core\ORM\Timestamps;
+use LearningCore\ORM\Timestamps;
 
 /**
  * @Entity

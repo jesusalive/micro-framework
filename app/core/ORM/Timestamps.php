@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Learning\Core\ORM;
+namespace LearningCore\ORM;
 
 trait Timestamps
 {
