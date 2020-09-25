@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace LearningCore\Routes;
-
 
 interface IGroupRouter
 {
@@ -10,4 +10,5 @@ interface IGroupRouter
     public function post(string $name, string $path, $controller, string $method = null): GroupRoute;
     public function put(string $name, string $path, $controller, string $method = null): GroupRoute;
     public function delete(string $name, string $path, $controller, string $method = null): GroupRoute;
+    public function group(string $prefix, callable $routes): GroupInRouterGroup;
 }

@@ -24,11 +24,23 @@ $router->get('info', '/info', function ($params, $body, $request) {
 $router->group('/prefix', function (GroupRouter $router) {
     return [
         $router->get('dale', '/dale', function () {
-            return  Res::send("ola");
+            return Res::send("ola");
         }),
 
-        $router->get('teste', '/teste', function () {
-            return Res::send("teste");
+        $router->get('test', '/test', function () {
+            return Res::send("test1");
+        }),
+
+        $router->group('/prefix2', function (GroupRouter $router) {
+            return [
+                $router->get('dale2', '/dale', function () {
+                    return Res::send("ola2");
+                }),
+
+                $router->get('test2', '/test', function () {
+                    return Res::send("test2");
+                })
+            ];
         })
     ];
 });

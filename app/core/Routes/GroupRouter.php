@@ -24,4 +24,9 @@ class GroupRouter implements IGroupRouter
     {
         return new GroupRoute('DELETE', $name, $path, $controller, $method);
     }
+
+    public function group(string $prefix, callable $routes): GroupInRouterGroup
+    {
+        return new GroupInRouterGroup($prefix, $routes);
+    }
 }

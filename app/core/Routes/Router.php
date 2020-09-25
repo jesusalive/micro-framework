@@ -54,22 +54,27 @@ class Router extends AbstractRouter implements IRouter
 
     public function group(string $prefix, callable $routes): void
     {
-        $groupRoutes = $routes(new GroupRouter());
+        $groupItems = $routes(new GroupRouter());
 
-        foreach ($groupRoutes as $groupRoute) {
-            $routeName = str_replace($prefix, '/', '') . '_' . $groupRoute->getName();
-            $routePath = $prefix . $groupRoute->getPath();
+        foreach ($groupItems as $groupItem) {
+            if ($groupItem instanceof GroupInRouterGroup) {
+                self::group($prefix . $groupItem->getPrefix(), $groupItem->getRoutesFunction());
+                return;
+            }
+
+            $routeName = str_replace('/', '', $prefix) . '_' . $groupItem->getName();
+            $routePath = $prefix . $groupItem->getPath();
 
             $this->map(
                 RoutesCoreUtils::handleRouteName(
                     $routeName,
                     $routePath,
-                    $groupRoute->getHttpVerb()
+                    $groupItem->getHttpVerb()
                 ),
                 $routePath,
-                $groupRoute->getController(),
-                $groupRoute->getHttpVerb(),
-                $groupRoute->getMethod()
+                $groupItem->getController(),
+                $groupItem->getHttpVerb(),
+                $groupItem->getMethod()
             );
         }
     }
