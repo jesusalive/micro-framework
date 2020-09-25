@@ -10,4 +10,5 @@ interface IRouter
     public function post(string $name, string $path, $controller, string $method = null): void;
     public function put(string $name, string $path, $controller, string $method = null): void;
     public function delete(string $name, string $path, $controller, string $method = null): void;
+    public function group(string $prefix, callable $routes): void;
 }

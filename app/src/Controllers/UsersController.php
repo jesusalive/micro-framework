@@ -3,7 +3,7 @@
 namespace Learning\Controllers;
 
 use Doctrine\ORM\EntityRepository;
-use Learning\Core\Controller;
+use LearningCore\Controller;
 use LearningCore\Res;
 use LearningCore\Utils;
 use Learning\Entities\User;

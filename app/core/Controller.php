@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Learning\Core;
+namespace LearningCore;
 
 use Doctrine\ORM\EntityManager;
-use Learning\Core\ORM\ORMCore;
+use LearningCore\ORM\ORMCore;
 use Symfony\Component\HttpFoundation\Request;
 
 abstract class Controller

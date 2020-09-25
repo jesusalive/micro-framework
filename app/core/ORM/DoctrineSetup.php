@@ -6,7 +6,7 @@ use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\Tools\Setup;
-use Learning\Core\Res;
+use LearningCore\Res;
 
 class DoctrineSetup
 {

@@ -2,7 +2,7 @@
 
 use Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper;
 use Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper;
-use Learning\Core\ORM\ORMCore;
+use LearningCore\ORM\ORMCore;
 use Symfony\Component\Console\Helper\HelperSet;
 
 require_once __DIR__ . '/bootstrap/bootstrap.php';

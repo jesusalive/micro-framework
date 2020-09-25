@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Learning\Core\Kernel;
+use LearningCore\Kernel;
 use Symfony\Component\HttpFoundation\Request;
 
 require_once __DIR__ . '/bootstrap/bootstrap.php';
