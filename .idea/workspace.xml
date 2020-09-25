@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/core/Routes/GroupInRouterGroup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Routes/GroupRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Routes/GroupRouter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Routes/IGroupRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Routes/IGroupRouter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Routes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Routes/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +144,8 @@
       <workItem from="1600903428013" duration="3693000" />
       <workItem from="1600969776183" duration="3308000" />
       <workItem from="1600993891136" duration="2019000" />
-      <workItem from="1601032238728" duration="5019000" />
+      <workItem from="1601032238728" duration="6700000" />
+      <workItem from="1601075462538" duration="24000" />
     </task>
     <servers />
   </component>

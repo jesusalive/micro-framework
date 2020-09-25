@@ -62,12 +62,10 @@ class Router extends AbstractRouter implements IRouter
                 return;
             }
 
-            $routeName = str_replace('/', '', $prefix) . '_' . $groupItem->getName();
             $routePath = $prefix . $groupItem->getPath();
-
             $this->map(
                 RoutesCoreUtils::handleRouteName(
-                    $routeName,
+                    $groupItem->getName(),
                     $routePath,
                     $groupItem->getHttpVerb()
                 ),
