@@ -2,6 +2,8 @@
 
 namespace LearningCore\Routes;
 
+use Closure;
+
 class GroupRouter implements IGroupRouter
 {
 
@@ -25,7 +27,7 @@ class GroupRouter implements IGroupRouter
         return new GroupRoute('DELETE', $name, $path, $controller, $method);
     }
 
-    public function group(string $prefix, callable $routes): GroupInRouterGroup
+    public function group(string $prefix, Closure $routes): GroupInRouterGroup
     {
         return new GroupInRouterGroup($prefix, $routes);
     }

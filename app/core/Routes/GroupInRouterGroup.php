@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace LearningCore\Routes;
 
+use Closure;
+
 class GroupInRouterGroup
 {
     private string $prefix;
-    private $routesFunction;
+    private Closure $routesFunction;
 
     /**
      * GroupRouterGroup constructor.
      * @param string $prefix
-     * @param callable $routesFunction
+     * @param Closure $routesFunction
      */
-    public function __construct(string $prefix, callable $routesFunction)
+    public function __construct(string $prefix, Closure $routesFunction)
     {
         $this->prefix = $prefix;
         $this->routesFunction = $routesFunction;
@@ -39,18 +41,18 @@ class GroupInRouterGroup
     }
 
     /**
-     * @return array
+     * @return Closure
      */
-    public function getRoutesFunction(): callable
+    public function getRoutesFunction(): Closure
     {
         return $this->routesFunction;
     }
 
     /**
-     * @param callable $routes
+     * @param Closure $routes
      * @return GroupInRouterGroup
      */
-    public function setRoutesFunction(callable $routes): GroupInRouterGroup
+    public function setRoutesFunction(Closure $routes): GroupInRouterGroup
     {
         $this->routesFunction = $routes;
         return $this;

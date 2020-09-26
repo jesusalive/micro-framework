@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LearningCore\Routes;
 
+use Closure;
 use Symfony\Component\Routing\RouteCollection;
 
 class Router extends AbstractRouter implements IRouter
@@ -52,7 +53,7 @@ class Router extends AbstractRouter implements IRouter
         );
     }
 
-    public function group(string $prefix, callable $routes): void
+    public function group(string $prefix, Closure $routes): void
     {
         $groupItems = $routes(new GroupRouter());
 

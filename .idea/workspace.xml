@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ccaf4b4f-1990-443e-869d-86ecc178b4b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Routes/IGroupRouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Routes/IGroupRouter.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +215,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1600032385987" />
+    <state x="374" y="136" width="618" height="522" key="find.popup" timestamp="1601145314603">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="374" y="136" width="618" height="522" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1601145314603" />
     <state x="347" y="177" key="run.anything.popup" timestamp="1600994948251">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
