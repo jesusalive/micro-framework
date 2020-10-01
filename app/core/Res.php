@@ -17,10 +17,17 @@ class Res
         return $response;
     }
 
-    public static function error(string $message, int $status = Response::HTTP_BAD_REQUEST): JsonResponse
+    public static function error(string $message, string $type = 'AppError', int $status = Response::HTTP_BAD_REQUEST): JsonResponse
     {
         $response = new JsonResponse(
-            ["errors" => ["error" => ["message" => $message]]],
+            [
+                "errors" => [
+                    "error" => [
+                        "type" => $type,
+                        "message" => $message
+                    ]
+                ]
+            ],
             $status
         );
         $response->headers->set('Content-Type', 'application/json');

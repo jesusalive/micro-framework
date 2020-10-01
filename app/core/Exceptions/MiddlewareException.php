@@ -6,8 +6,8 @@ namespace LearningCore\Exceptions;
 
 class MiddlewareException extends \RuntimeException
 {
-    public function __construct($message = "", $code = 400)
+    public function __construct($message = "")
     {
-        parent::__construct($message, $code, null);
+        parent::__construct($message, 400, null);
     }
 }

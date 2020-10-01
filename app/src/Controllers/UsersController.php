@@ -39,7 +39,7 @@ class UsersController extends Controller
         $user = $this->userRepository->findOneBy(['id' => $id]);
 
         if (!$user) {
-            return Res::error('User not found');
+            return Res::error('User not found', 'NotFoundError');
         }
 
         if ($this->requestBody->name) {
@@ -60,7 +60,7 @@ class UsersController extends Controller
         $user = $this->userRepository->findOneBy(['id' => $id]);
 
         if (!$user) {
-            return Res::error('User not found');
+            return Res::error('User not found', 'NotFoundError');
         }
 
         $this->entityManager->remove($user);

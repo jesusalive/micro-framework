@@ -31,9 +31,9 @@ class DoctrineSetup
                 $config
             );
         } catch (ORMException $e) {
-            Res::error($e->getMessage())->send();
+            Res::error($e->getMessage(), 'ORMConnectError')->send();
         } catch (DBALException $e) {
-            Res::error('Doctrine driver invalid. Verify your .env')->send();
+            Res::error('Doctrine driver invalid. Verify your .env', 'DoctrineDriverError')->send();
         }
     }
 
