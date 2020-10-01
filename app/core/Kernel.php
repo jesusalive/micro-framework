@@ -49,7 +49,7 @@ class Kernel implements HttpKernelInterface
             $this->executeMiddlewares($route->getMiddlewares(), $request, $routeParams);
             $response = call_user_func_array([$controller, $attributes['method']], $routeParams);
         } catch (ResourceNotFoundException $e) {
-            $response = Res::error('Not found!', 'NotFoundError',Response::HTTP_NOT_FOUND);
+            $response = Res::error('Not found!', 'NotFoundError', Response::HTTP_NOT_FOUND);
         } catch (MethodNotAllowedException $e) {
             $response = Res::error(
                 'Method not allowed!',
