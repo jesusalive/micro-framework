@@ -8,9 +8,9 @@ use Closure;
 
 interface IRouter
 {
-    public function get(string $name, string $path, $controller, string $method = null): void;
-    public function post(string $name, string $path, $controller, string $method = null): void;
-    public function put(string $name, string $path, $controller, string $method = null): void;
-    public function delete(string $name, string $path, $controller, string $method = null): void;
-    public function group(string $prefix, Closure $routes): void;
+    public function get(string $name, string $path, array $middlewares, $controller, string $method = null): void;
+    public function post(string $name, string $path, array $middlewares, $controller, string $method = null): void;
+    public function put(string $name, string $path, array $middlewares, $controller, string $method = null): void;
+    public function delete(string $name, string $path, array $middlewares, $controller, string $method = null): void;
+    public function group(array $middlewares, string $prefix, Closure $routes): void;
 }

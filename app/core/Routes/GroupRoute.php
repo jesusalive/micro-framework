@@ -11,6 +11,7 @@ class GroupRoute
     private string $path;
     private $controller;
     private $method;
+    private array $middlewares;
 
     /**
      * GroupRoute constructor.
@@ -19,8 +20,10 @@ class GroupRoute
      * @param string $path
      * @param $controller
      * @param $method
+     * @param array $middlewares
      */
     public function __construct(
+        array $middlewares,
         string $httpVerb,
         string $name,
         string $path,
@@ -32,6 +35,7 @@ class GroupRoute
         $this->path = $path;
         $this->controller = $controller;
         $this->method = $method;
+        $this->middlewares = $middlewares;
     }
 
     /**
@@ -118,6 +122,24 @@ class GroupRoute
     public function setMethod(string $method): GroupRoute
     {
         $this->method = $method;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMiddlewares(): array
+    {
+        return $this->middlewares;
+    }
+
+    /**
+     * @param array $middlewares
+     * @return GroupRoute
+     */
+    public function setMiddlewares(array $middlewares): GroupRoute
+    {
+        $this->middlewares = $middlewares;
         return $this;
     }
 }

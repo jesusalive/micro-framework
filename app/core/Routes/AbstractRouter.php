@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace LearningCore\Routes;
 
 use Symfony\Component\Routing\RouteCollection;
-use Symfony\Component\Routing\Route;
+use LearningCore\Routes\Route;
 
 abstract class AbstractRouter
 {
@@ -21,7 +21,8 @@ abstract class AbstractRouter
         string $path,
         $controller,
         string $httpVerb,
-        string $controllerMethod = null
+        string $controllerMethod = null,
+        array $middlewares = []
     ): void {
         $this->routes->add(
             $name,
@@ -32,7 +33,9 @@ abstract class AbstractRouter
                 [],
                 null,
                 [],
-                [$httpVerb]
+                [$httpVerb],
+                '',
+                $middlewares
             )
         );
     }

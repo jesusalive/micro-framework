@@ -10,16 +10,19 @@ class GroupInRouterGroup
 {
     private string $prefix;
     private Closure $routesFunction;
+    private array $middlewares;
 
     /**
      * GroupRouterGroup constructor.
      * @param string $prefix
      * @param Closure $routesFunction
+     * @param array $middlewares
      */
-    public function __construct(string $prefix, Closure $routesFunction)
+    public function __construct(array $middlewares, string $prefix, Closure $routesFunction)
     {
         $this->prefix = $prefix;
         $this->routesFunction = $routesFunction;
+        $this->middlewares = $middlewares;
     }
 
     /**
@@ -55,6 +58,24 @@ class GroupInRouterGroup
     public function setRoutesFunction(Closure $routes): GroupInRouterGroup
     {
         $this->routesFunction = $routes;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMiddlewares(): array
+    {
+        return $this->middlewares;
+    }
+
+    /**
+     * @param array $middlewares
+     * @return GroupInRouterGroup
+     */
+    public function setMiddlewares(array $middlewares): GroupInRouterGroup
+    {
+        $this->middlewares = $middlewares;
         return $this;
     }
 }
