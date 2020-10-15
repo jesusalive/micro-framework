@@ -29,12 +29,6 @@ class DoctrineUserRepository extends DoctrineRepository implements IUserReposito
         return $this->entityRepository->findAll();
     }
 
-    public function findOneBy(array $params): ?object
-    {
-        return $this->entityRepository->findOneBy($params);
-    }
-
-
     public function create(CreateUserDTO $userDTO): User
     {
         $emailAlreadyInUse = $this->entityRepository->findOneBy(['email' => $userDTO->getEmail()]);

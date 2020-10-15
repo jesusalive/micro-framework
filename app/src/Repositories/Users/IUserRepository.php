@@ -11,7 +11,6 @@ use Learning\Repositories\Users\DTO\UpdateUserDTO;
 interface IUserRepository
 {
     public function getAll(): array;
-    public function findOneBy(array $params): ?object;
     public function create(CreateUserDTO $userDTO): User;
     public function update(int $id, UpdateUserDTO $userDTO): User;
     public function delete(int $id): void;
