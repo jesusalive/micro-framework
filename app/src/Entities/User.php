@@ -141,4 +141,12 @@ class User implements \JsonSerializable
             "updatedAt" => $this->getUpdatedAt()
         ];
     }
+
+    public static function fromObject(object $user): User
+    {
+        return (new User($user->getName(), $user->getEmail()))
+            ->setId($user->getId())
+            ->setCreatedAt($user->getCreatedAt())
+            ->setUpdatedAt($user->getUpdatedAt());
+    }
 }

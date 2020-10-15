@@ -2,70 +2,40 @@
 
 namespace Learning\Controllers;
 
-use Doctrine\ORM\EntityRepository;
+use Learning\Repositories\Users\DTO\CreateUserDTO;
+use Learning\Repositories\Users\DTO\UpdateUserDTO;
+use Learning\Repositories\Users\DoctrineUserRepository;
+use Learning\Services\User\CreateUserService;
+use Learning\Services\User\DeleteUserService;
+use Learning\Services\User\GetAllUsersService;
+use Learning\Services\User\UpdateUserService;
 use LearningCore\Controller;
+use LearningCore\Exceptions\DBException;
+use LearningCore\Exceptions\EntityNotFoundException;
+use LearningCore\Exceptions\ValidationException;
 use LearningCore\Res;
-use LearningCore\Utils;
-use Learning\Entities\User;
-use Symfony\Component\HttpFoundation\Request;
 
 class UsersController extends Controller
 {
-    private EntityRepository $userRepository;
-
-    public function __construct(Request $request)
-    {
-        parent::__construct($request);
-        $this->userRepository = $this->entityManager->getRepository(User::class);
-    }
-
     public function getAll()
     {
-        $users = Utils::getJsonSerializeArray($this->userRepository->findAll());
-        return Res::json($users);
+        return (new GetAllUsersService(new DoctrineUserRepository()))();
     }
 
     public function create()
     {
-        $user = new User($this->requestBody->name, $this->requestBody->email);
-        $this->entityManager->persist($user);
-        $this->entityManager->flush();
-
-        return Res::json($user);
+        $userDTO = new CreateUserDTO($this->requestBody->name, $this->requestBody->email);
+        return (new CreateUserService(new DoctrineUserRepository()))($userDTO);
     }
 
     public function update($id)
     {
-        $user = $this->userRepository->findOneBy(['id' => $id]);
-
-        if (!$user) {
-            return Res::error('User not found', 'NotFoundError');
-        }
-
-        if ($this->requestBody->name) {
-            $user->setName($this->requestBody->name);
-        }
-
-        if ($this->requestBody->email) {
-            $user->setName($this->requestBody->name);
-        }
-
-        $this->entityManager->flush();
-
-        return Res::json($user);
+        $userDTO = new UpdateUserDTO($this->requestBody->name, $this->requestBody->email);
+        return (new UpdateUserService(new DoctrineUserRepository()))($id, $userDTO);
     }
 
     public function delete($id)
     {
-        $user = $this->userRepository->findOneBy(['id' => $id]);
-
-        if (!$user) {
-            return Res::error('User not found', 'NotFoundError');
-        }
-
-        $this->entityManager->remove($user);
-        $this->entityManager->flush();
-
-        return Res::send('');
+        return (new DeleteUserService(new DoctrineUserRepository()))($id);
     }
 }

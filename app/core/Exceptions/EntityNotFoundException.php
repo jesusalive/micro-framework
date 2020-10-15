@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace LearningCore\Exceptions;
 
-class MiddlewareException extends Exception
+class EntityNotFoundException extends Exception
 {
     public function __construct($message = "")
     {
-        parent::__construct($message, 'MiddlewareException', 400);
+        parent::__construct($message, 'NotFoundError', 400);
     }
 }

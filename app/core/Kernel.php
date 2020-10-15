@@ -57,7 +57,7 @@ class Kernel implements HttpKernelInterface
                 Response::HTTP_BAD_REQUEST
             );
         } catch (MiddlewareException $e) {
-            $response = Res::error($e->getMessage(), 'MiddlewareError', Response::HTTP_BAD_REQUEST);
+            $response = Res::error($e->getMessage(), $e->getMessage(), $e->getCode());
         }
 
         return $response;

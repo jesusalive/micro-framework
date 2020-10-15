@@ -6,7 +6,7 @@ namespace LearningCore;
 
 class Utils
 {
-    public static function getJsonSerializeArray(array $data)
+    public static function getJsonSerializedArray(array $data)
     {
         $formattedData = [];
 

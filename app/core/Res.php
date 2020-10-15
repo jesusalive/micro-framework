@@ -25,7 +25,7 @@ class Res
         $response = new JsonResponse(
             [
                 "errors" => [
-                    "error" => [
+                    [
                         "type" => $type,
                         "message" => $message
                     ]
