@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Learning\Services\User;
 
-use Learning\Repositories\Users\IUserRepository;
+use Learning\Repositories\User\IUserRepository;
 use LearningCore\Exceptions\DBException;
 use LearningCore\Exceptions\EntityNotFoundException;
 use LearningCore\Res;

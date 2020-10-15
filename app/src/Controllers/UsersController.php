@@ -2,9 +2,9 @@
 
 namespace Learning\Controllers;
 
-use Learning\Repositories\Users\DTO\CreateUserDTO;
-use Learning\Repositories\Users\DTO\UpdateUserDTO;
-use Learning\Repositories\Users\DoctrineUserRepository;
+use Learning\Repositories\User\DTO\CreateUserDTO;
+use Learning\Repositories\User\DTO\UpdateUserDTO;
+use Learning\Repositories\User\DoctrineUserRepository;
 use Learning\Services\User\CreateUserService;
 use Learning\Services\User\DeleteUserService;
 use Learning\Services\User\GetAllUsersService;

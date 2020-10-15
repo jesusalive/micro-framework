@@ -1,14 +1,14 @@
 <?php
 
-namespace Learning\Repositories\Users;
+namespace Learning\Repositories\User;
 
 use Doctrine\DBAL\Driver\PDOException;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Learning\Entities\User;
-use Learning\Repositories\Users\DTO\CreateUserDTO;
-use Learning\Repositories\Users\DTO\UpdateUserDTO;
+use Learning\Repositories\User\DTO\CreateUserDTO;
+use Learning\Repositories\User\DTO\UpdateUserDTO;
 use LearningCore\DoctrineRepository;
 use LearningCore\Exceptions\DBException;
 use LearningCore\Exceptions\EntityNotFoundException;

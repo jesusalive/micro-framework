@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Learning\Repositories\Users\DTO;
+namespace Learning\Repositories\User\DTO;
 
 use LearningCore\IDTO;
 

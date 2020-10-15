@@ -2,8 +2,8 @@
 
 namespace Learning\Services\User;
 
-use Learning\Repositories\Users\DTO\UpdateUserDTO;
-use Learning\Repositories\Users\IUserRepository;
+use Learning\Repositories\User\DTO\UpdateUserDTO;
+use Learning\Repositories\User\IUserRepository;
 use LearningCore\Exceptions\DBException;
 use LearningCore\Exceptions\EntityNotFoundException;
 use LearningCore\Res;

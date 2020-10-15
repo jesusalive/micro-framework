@@ -21,7 +21,7 @@ services:
       - MYSQL_USER=teste
       - MYSQL_PASSWORD=teste
 
-  web:
+  app:
     image: nginx:latest
     container_name: server
     ports:

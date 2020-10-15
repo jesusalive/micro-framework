@@ -2,7 +2,7 @@
 
 namespace Learning\Services\User;
 
-use Learning\Repositories\Users\IUserRepository;
+use Learning\Repositories\User\IUserRepository;
 use LearningCore\Res;
 use LearningCore\Utils;
 

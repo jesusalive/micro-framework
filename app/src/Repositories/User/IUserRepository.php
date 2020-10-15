@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Learning\Repositories\Users;
+namespace Learning\Repositories\User;
 
 use Learning\Entities\User;
-use Learning\Repositories\Users\DTO\CreateUserDTO;
-use Learning\Repositories\Users\DTO\UpdateUserDTO;
+use Learning\Repositories\User\DTO\CreateUserDTO;
+use Learning\Repositories\User\DTO\UpdateUserDTO;
 
 interface IUserRepository
 {
